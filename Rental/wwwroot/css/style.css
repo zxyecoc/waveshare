@@ -3,100 +3,104 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background-color: #e0e0e0; /* Трохи темніший фон */
-    color: #000; /* Чорний текст */
-    font-family: 'Roboto', sans-serif; /* Додаємо шрифт Roboto */
+    background-color: #f0f8ff; /* Дуже світлий блакитний фон (майже білий) */
+    color: #333; /* Темно-сірий текст для контрасту */
+    font-family: 'Momo Trust Display', sans-serif; /* Додаємо шрифт Roboto */
 }
 
 h1, h2, h3, p {
-    color: #000; /* Чорний текст */
+    color: #003c7a; /* Темно-синій текст */
 }
 
 /* Лінки */
 a {
-    color: #000; /* Чорний текст */
+    color: #0056b3; /* Насичений синій текст */
     text-decoration: none;
-    transition: transform 0.2s;
+    transition: color 0.2s, transform 0.2s;
 }
 
     a:hover {
-        transform: scale(1.1); /* Збільшення тексту при наведенні */
+        color: #6495ed; /* Світліший синій при наведенні */
+        transform: scale(1.05); /* Збільшення тексту при наведенні */
     }
 
 /* Кнопки */
 .btn {
-    background-color: #fff; /* Білі кнопки */
-    color: #000; /* Чорний текст */
-    border: 1px solid #000; /* Чорний контур */
-    transition: background-color 0.3s, color 0.3s;
+    background-color: #0056b3; /* Насичений синій фон */
+    color: #fff; /* Білий текст */
+    border: 1px solid #0056b3; /* Синій контур */
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
 }
 
     .btn:hover {
-        background-color: #000; /* Чорний фон при наведенні */
+        background-color: #003c7a; /* Темніший синій фон при наведенні */
         color: #fff; /* Білий текст при наведенні */
+        border-color: #003c7a;
     }
 
-/* Кнопки сортування - зміни на сині */
+/* Кнопки сортування - сині */
 .btn-outline-primary {
     background-color: #fff;
-    border: 1px solid #007bff; /* Синій контур */
-    color: #007bff; /* Синій текст */
+    border: 1px solid #0056b3; /* Насичений синій контур */
+    color: #0056b3; /* Насичений синій текст */
 }
 
     .btn-outline-primary:hover {
-        background-color: #007bff;
+        background-color: #0056b3;
         color: #fff; /* Білий текст при наведенні */
     }
 
 /* Навігація */
 nav.navbar {
-    background-color: #fff; /* Світлий фон панелі */
-    border-bottom: 2px solid #000; /* Чорна рамка */
+    background-color: #003c7a; /* Темно-синій фон панелі */
+    border-bottom: 2px solid #0056b3; /* Насичена синя рамка */
 }
 
 .nav-link {
-    color: #000; /* Чорні написи */
-    transition: transform 0.2s;
+    color: #fff; /* Білі написи */
+    transition: color 0.2s, transform 0.2s;
 }
 
     .nav-link:hover {
+        color: #6495ed; /* Світло-блакитний при наведенні */
         transform: scale(1.1); /* Збільшення при наведенні */
     }
 
-/* Карточки автомобілів */
-.car-card .card {
+/* Карточки човнів */
+.car-card .card { /* Змінено назву класу для більшої відповідності */
     background-color: #fff; /* Білий фон */
-    color: #000; /* Чорний текст */
-    border: 1px solid #ddd; /* Світлий контур */
+    color: #333; /* Темно-сірий текст */
+    border: 1px solid #0056b3; /* Синій контур */
     border-radius: 10px;
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .car-card:hover .card {
     transform: scale(1.03);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 6px 12px rgba(0, 86, 179, 0.3); /* Синя тінь */
 }
 
-/* Кнопка "Детальніше" - чорна обводка за замовчуванням, жовта без обводки при наведенні */
+/* Кнопка "Детальніше" - синя */
 .btn-primary {
-    background-color: #fff;
-    border: 1px solid #000; /* Чорна обводка */
-    color: #000;
+    background-color: #0056b3;
+    border: 1px solid #0056b3; /* Синя обводка */
+    color: #fff;
     transition: background-color 0.3s, border 0.3s;
 }
 
     .btn-primary:hover {
-        background-color: #ffc107; /* Жовтий фон при наведенні */
+        background-color: #6495ed; /* Світло-блакитний фон при наведенні */
         color: #fff; /* Білий текст при наведенні */
-        border: none; /* Без обводки при наведенні */
+        border: 1px solid #6495ed;
     }
 
 /* Футер */
 footer {
-    background-color: #e0e0e0; /* Той самий фон, що й основний фон */
-    color: #000;
-    font-family: 'Roboto', sans-serif; /* Додаємо шрифт Roboto */
+    background-color: #003c7a; /* Темно-синій фон */
+    color: #000; /* Білий текст */
+    font-family: 'Momo Trust Display', sans-serif; /* Додаємо шрифт Roboto */
     padding: 20px 0;
+    border-top: 2px solid #0056b3;
 }
 
 /* Відступ для кнопок сортування */
@@ -109,8 +113,3 @@ footer {
     list-style-type: none; /* Видаляє маркер списку */
     padding-left: 0; /* Видаляє відступ зліва */
 }
-
-
-  
-
-

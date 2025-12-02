@@ -86,13 +86,18 @@ app.MapControllerRoute(
     name: "categoryFilter",
     pattern: "{controller=Cars}/{action}/{category?}");
 
-// ������������ ���� �����
 using (var scope = app.Services.CreateScope())
 {
     AppDBContent content = scope.ServiceProvider.GetRequiredService<AppDBContent>();
     UserManager<User> userManager = scope.ServiceProvider.GetRequiredService<UserManager<User>>();
     RoleManager<IdentityRole> roleManager = scope.ServiceProvider.GetRequiredService<RoleManager<IdentityRole>>();
     await DBObjects.Initial(content, userManager, roleManager);
+}
+
+using (var scope = app.Services.CreateScope())
+{
+    var db = scope.ServiceProvider.GetRequiredService<AppDBContent>();
+    await SeedData.Initialize(db);
 }
 
 app.Run();

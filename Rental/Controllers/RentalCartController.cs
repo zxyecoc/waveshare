@@ -42,12 +42,12 @@ namespace Rental.Controllers
                
                 if (_rentalCart.listRentalItems.Any(i => i.car.id == id))
                 {
-                    TempData["Message"] = "Ви вже обрали даний автомобіль";
+                    TempData["Message"] = "Ви вже обрали даний Човен";
                 }
                 else
                 {
                     _rentalCart.AddToCart(item);
-                    TempData["Message"] = "Автомобіль додано до кошика";
+                    TempData["Message"] = "Човен додано до кошика";
                 }
             }
 

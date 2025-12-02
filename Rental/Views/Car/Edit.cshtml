@@ -5,9 +5,9 @@
     Layout = "_Layout";
 }
 
-<h1>Редагувати автомобіль</h1>
+<h1>Редагувати Човен</h1>
 
-<h4>Автомобіль</h4>
+<h4>Човен</h4>
 <hr />
 <div class="row">
     <div class="col-md-6">
@@ -22,7 +22,6 @@
                 <span asp-validation-for="CategoryId" class="text-danger"></span>
             </div>
 
-            <!-- Назва автомобіля -->
             <div class="form-group">
                 <label asp-for="name" class="control-label">Назва</label>
                 <input asp-for="name" class="form-control" />
@@ -80,7 +79,7 @@
 
             <!-- Тип кузова -->
             <div class="form-group">
-                <label asp-for="bodyType" class="control-label">Тип кузова</label>
+                <label asp-for="bodyType" class="control-label">Довжина човна</label>
                 <input asp-for="bodyType" class="form-control" />
                 <span asp-validation-for="bodyType" class="text-danger"></span>
             </div>
@@ -101,7 +100,7 @@
 
             <!-- Тип пального -->
             <div class="form-group">
-                <label asp-for="fuelType" class="control-label">Тип пального</label>
+                <label asp-for="fuelType" class="control-label">Максимальна швидкість</label>
                 <input asp-for="fuelType" class="form-control" />
                 <span asp-validation-for="fuelType" class="text-danger"></span>
             </div>
@@ -115,7 +114,7 @@
 
             <!-- Коробка передач -->
             <div class="form-group">
-                <label asp-for="transmission" class="control-label">Коробка передач</label>
+                <label asp-for="transmission" class="control-label">Рік випуску</label>
                 <input asp-for="transmission" class="form-control" />
                 <span asp-validation-for="transmission" class="text-danger"></span>
             </div>

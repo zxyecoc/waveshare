@@ -8,7 +8,9 @@
     <!-- Підключення власних стилів -->
     <link href="/css/style.css" rel="stylesheet" type="text/css" />
     <!-- Додавання шрифтів Roboto з Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Momo+Trust+Display&display=swap" rel="stylesheet">
     <script type="text/javascript">
         function googleTranslateElementInit() {
             new google.translate.TranslateElement({
@@ -23,10 +25,9 @@
 <body>
     <header>
         <nav class="navbar navbar-expand-md">
-            <div class="container-fluid">
+            <div class="container-fluid container">
                 <a class="navbar-brand" href="/">
-                    <img src="/img/icon.png" alt="TaneRoll" width="60" height="60" class="me-2">
-                    <span>TaneRoll</span>
+                    <img src="\img\wave_icon.png" alt="WaveShare" width="130" height="45" class="me-2">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -34,7 +35,7 @@
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <ul class="navbar-nav me-auto mb-2 mb-md-0">
                         <li class="nav-item">
-                            <a class="nav-link" href="/Cars/List">Автомобілі</a>
+                            <a class="nav-link" href="/Cars/List">Човни</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="/Cars/Conditions">Умови</a>
@@ -50,7 +51,7 @@
                             @if (User.Identity != null && User.Identity.IsAuthenticated && User.IsInRole("Admin"))
                             {
                                 <li class="nav-item">
-                                    <a class="nav-link" asp-area="" asp-controller="Car" asp-action="Index">Авто</a>
+                                    <a class="nav-link" asp-area="" asp-controller="Car" asp-action="Index">Човни</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" asp-area="" asp-controller="CarImages" asp-action="Index">Фото</a>
@@ -99,22 +100,35 @@
     </div>
 
     <footer class="container mt-5 footer-background">
-        <div class="d-flex justify-content-between align-items-center">
-            <p class="mb-0">© 2024 Усі права захищені · <a href="/Cars/Politic" class="text-dark">Політика конфіденційності</a></p>
-            <div class="d-flex align-items-center">
-                <div class="d-inline-flex align-items-center me-3">
-                    <img src="/img/phone.png" alt="Phone" width="24" height="24" class="me-2">
-                    <span>+380971550195</span>
+    <div>
+            <div class="d-flex justify-content-between">
+                <div>
+                    <a class="navbar-brand" href="/">
+                        <img src="\img\wave_icon.png" alt="WaveShare" width="130" height="45" class="me-2">
+                    </a>
+                    <p class="mt-3" style="max-width:400px;">
+                        Ласкаво просимо до WaveShare — вашого надійного партнера в оренді човнів у Хмельницькій області. Наша місія — дарувати вам незабутні враження від відпочинку на воді, надаючи доступ до якісних і безпечних плавзасобів. Ми віримо, що кожна подорож по воді має бути комфортною та легкою.
+                    </p>
                 </div>
-                <div class="ms-3 d-inline-flex align-items-center">
-                    <img src="/img/instagram.png" alt="Instagram" width="24" height="24" class="me-2">
-                    <span>taneroll_project</span>
+                <div>
+                    <h2>Контакти</h2>
+                    <div class="d-flex" style="flex-direction:column;">
+                        <div class="d-inline-flex me-3">
+                            <img src="/img/phone.png" alt="Phone" width="24" height="24" class="me-2">
+                            <span>+380685433884</span>
+                        </div>
+                        <div class="d-inline-flex" style="margin-top:15px;">
+                            <img src="/img/instagram.png" alt="Instagram" width="24" height="24" class="me-2">
+                            <span>waveshare_rental</span>
+                        </div>
+                        </div\>
+                    </div>
                 </div>
-            </div>
-            <a href="#" class="btn btn-dark rounded-pill">Вгору</a>
-        </div>
-    </footer>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d41536.06282706498!2d26.919214802365705!3d49.40883142405868!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473206e320b81beb%3A0x5e95c82a31e9e859!2sNaberezhna!5e0!3m2!1sru!2sua!4v1762192657589!5m2!1sru!2sua" width="400" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
+            </div>
+            <p class="mb-0">© 2025 Усі права захищені · <a href="/Cars/Politic" class="text-dark">Політика конфіденційності</a></p>
+    </footer>
     <script>
         // Показ віджета перекладу при кліку на кнопку
         document.getElementById('custom_translate_button').addEventListener('click', function () {

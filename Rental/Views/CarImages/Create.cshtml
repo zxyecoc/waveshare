@@ -6,7 +6,7 @@
 
 <h1>Створити зображення</h1>
 
-<h4>Зображення автомобіля</h4>
+<h4>Зображення човна</h4>
 <hr />
 <div class="row">
     <div class="col-md-6">
@@ -20,9 +20,8 @@
                 <span asp-validation-for="Url" class="text-danger"></span>
             </div>
 
-            <!-- Вибір автомобіля -->
             <div class="form-group">
-                <label asp-for="CarId" class="control-label">Автомобіль</label>
+                <label asp-for="CarId" class="control-label">Човен</label>
                 <select asp-for="CarId" class="form-control" asp-items="ViewBag.CarId"></select>
             </div>
 

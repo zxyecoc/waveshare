@@ -7,95 +7,111 @@
 
 <h1>Створити</h1>
 
-<h4>Автомобіль</h4>
+<h4>Човен</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
             <div class="form-group">
-                <label asp-for="CategoryId" class="control-label"></label>
+                <label asp-for="CategoryId" class="control-label">Категорія</label>
                 <select asp-for="CategoryId" class="form-select" asp-items="@((SelectList)(ViewData["CategorySelect"]))"></select>
                 <span asp-validation-for="CategoryId" class="text-danger"></span>
             </div>
+
             <div class="form-group">
-                <label asp-for="name" class="control-label"></label>
+                <label asp-for="name" class="control-label">Назва човна</label>
                 <input asp-for="name" class="form-control" />
                 <span asp-validation-for="name" class="text-danger"></span>
             </div>
+
             <div class="form-group">
-                <label asp-for="shortDesc" class="control-label"></label>
+                <label asp-for="shortDesc" class="control-label">Короткий опис</label>
                 <input asp-for="shortDesc" class="form-control" />
                 <span asp-validation-for="shortDesc" class="text-danger"></span>
             </div>
+
             <div class="form-group">
-                <label asp-for="longDesc" class="control-label"></label>
+                <label asp-for="longDesc" class="control-label">Детальний опис</label>
                 <input asp-for="longDesc" class="form-control" />
                 <span asp-validation-for="longDesc" class="text-danger"></span>
             </div>
+
             <div class="form-group">
-                <label asp-for="img" class="control-label"></label>
+                <label asp-for="img" class="control-label">Зображення</label>
                 <input asp-for="img" class="form-control" />
                 <span asp-validation-for="img" class="text-danger"></span>
             </div>
+
             <div class="form-group">
-                <label asp-for="price" class="control-label"></label>
+                <label asp-for="price" class="control-label">Ціна оренди</label>
                 <input asp-for="price" class="form-control" />
                 <span asp-validation-for="price" class="text-danger"></span>
             </div>
+
             <div class="form-group form-check">
                 <label class="form-check-label">
-                    <input class="form-check-input" asp-for="isFavourite" /> @Html.DisplayNameFor(model => model.isFavourite)
+                    <input class="form-check-input" asp-for="isFavourite" /> Човен в кошику
                 </label>
             </div>
+
             <div class="form-group form-check">
                 <label class="form-check-label">
-                    <input class="form-check-input" asp-for="available" /> @Html.DisplayNameFor(model => model.available)
+                    <input class="form-check-input" asp-for="available" /> Доступний для оренди
                 </label>
             </div>
+
             <div class="form-group">
-                <label asp-for="seatingCapacity" class="control-label"></label>
+                <label asp-for="seatingCapacity" class="control-label">Місткість (осіб)</label>
                 <input asp-for="seatingCapacity" class="form-control" />
                 <span asp-validation-for="seatingCapacity" class="text-danger"></span>
             </div>
+
             <div class="form-group">
-                <label asp-for="bodyType" class="control-label"></label>
+                <label asp-for="bodyType" class="control-label">Довжина човна</label>
                 <input asp-for="bodyType" class="form-control" />
                 <span asp-validation-for="bodyType" class="text-danger"></span>
             </div>
+
             <div class="form-group">
-                <label asp-for="horsepower" class="control-label"></label>
+                <label asp-for="horsepower" class="control-label">Потужність двигуна (к.с.)</label>
                 <input asp-for="horsepower" class="form-control" />
                 <span asp-validation-for="horsepower" class="text-danger"></span>
             </div>
+
             <div class="form-group">
-                <label asp-for="engineDisplacement" class="control-label"></label>
+                <label asp-for="engineDisplacement" class="control-label">Обʼєм двигуна</label>
                 <input asp-for="engineDisplacement" class="form-control" />
                 <span asp-validation-for="engineDisplacement" class="text-danger"></span>
             </div>
+
             <div class="form-group">
-                <label asp-for="fuelType" class="control-label"></label>
+                <label asp-for="fuelType" class="control-label">Максимальна швидкість</label>
                 <input asp-for="fuelType" class="form-control" />
                 <span asp-validation-for="fuelType" class="text-danger"></span>
             </div>
+
             <div class="form-group">
-                <label asp-for="color" class="control-label"></label>
+                <label asp-for="color" class="control-label">Колір човна</label>
                 <input asp-for="color" class="form-control" />
                 <span asp-validation-for="color" class="text-danger"></span>
             </div>
+
             <div class="form-group">
-                <label asp-for="transmission" class="control-label"></label>
+                <label asp-for="transmission" class="control-label">Рік випуску</label>
                 <input asp-for="transmission" class="form-control" />
                 <span asp-validation-for="transmission" class="text-danger"></span>
             </div>
-            <div class="form-group">
+
+            <div class="form-group mt-3">
                 <input type="submit" value="Створити" class="btn btn-primary" />
             </div>
         </form>
     </div>
 </div>
 
-<div>
+<div class="mt-3">
     <a asp-action="Index">Повернутися до списку</a>
 </div>
 

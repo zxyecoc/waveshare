@@ -1,32 +1,32 @@
 ﻿@model IEnumerable<Rental.Data.Models.Car>
 
 @{
-    ViewData["Title"] = "Індекс";
+    ViewData["Title"] = "Човни";
     Layout = "_Layout";
 }
 
-<h1>Список автомобілів</h1>
+<h1>Список човнів</h1>
 
 <p>
-    <a asp-action="Create" class="btn btn-success">Створити новий автомобіль</a>
+    <a asp-action="Create" class="btn btn-success">Додати човен</a>
 </p>
 
 <table class="table table-sm">
     <thead>
         <tr>
-            <th>@Html.DisplayNameFor(model => model.name)</th>
-            <th>@Html.DisplayNameFor(model => model.shortDesc)</th>
-            <th>@Html.DisplayNameFor(model => model.longDesc)</th>
-            <th>@Html.DisplayNameFor(model => model.Category)</th>
-            <th>@Html.DisplayNameFor(model => model.img)</th>
-            <th>@Html.DisplayNameFor(model => model.price)</th>
-            <th>@Html.DisplayNameFor(model => model.isFavourite)</th>
-            <th>@Html.DisplayNameFor(model => model.available)</th>
-            <th>@Html.DisplayNameFor(model => model.bodyType)</th>
-            <th>@Html.DisplayNameFor(model => model.horsepower)</th>
-            <th>@Html.DisplayNameFor(model => model.fuelType)</th>
-            <th>@Html.DisplayNameFor(model => model.color)</th>
-            <th>@Html.DisplayNameFor(model => model.transmission)</th>
+            <th>Назва</th>
+            <th>Опис</th>
+            <th>Деталі</th>
+            <th>Категорія</th>
+            <th>Фото</th>
+            <th>Ціна</th>
+            <th>Топ</th>
+            <th>Доступ</th>
+            <th>Довжина</th>     @* bodyType *@
+            <th>Сили</th>         @* horsepower *@
+            <th>Швидкість</th>    @* fuelType *@
+            <th>Колір</th>
+            <th>Рік</th>          @* transmission *@
             <th></th>
         </tr>
     </thead>
@@ -34,23 +34,28 @@
         @foreach (var item in Model)
         {
             <tr>
-                <td>@Html.DisplayFor(modelItem => item.name)</td>
-                <td>@Html.DisplayFor(modelItem => item.shortDesc)</td>
-                <td>@Html.DisplayFor(modelItem => item.longDesc)</td>
-                <td>@Html.DisplayFor(model => item.Category.categoryName)</td>
-                <td><img src="@item.img" style="max-width: 100px; max-height: 100px;" /></td>
-                <td>@Html.DisplayFor(modelItem => item.price)</td>
-                <td>@Html.DisplayFor(modelItem => item.isFavourite)</td>
-                <td>@Html.DisplayFor(modelItem => item.available)</td>
-                <td>@Html.DisplayFor(modelItem => item.bodyType)</td>
-                <td>@Html.DisplayFor(modelItem => item.horsepower)</td>
-                <td>@Html.DisplayFor(modelItem => item.fuelType)</td>
-                <td>@Html.DisplayFor(modelItem => item.color)</td>
-                <td>@Html.DisplayFor(modelItem => item.transmission)</td>
+                <td>@item.name</td>
+                <td>@item.shortDesc</td>
+                <td>@item.longDesc</td>
+                <td>@item.Category?.categoryName</td>
                 <td>
-                    <a asp-action="Edit" asp-route-id="@item.id" class="btn btn-warning btn-sm">Редагувати</a> |
-                    <a asp-action="Details" asp-route-id="@item.id" class="btn btn-info btn-sm">Деталі</a> |
-                    <a asp-action="Delete" asp-route-id="@item.id" class="btn btn-danger btn-sm">Видалити</a>
+                    @if (!string.IsNullOrWhiteSpace(item.img))
+                    {
+                        <img src="@item.img" style="max-width:100px;max-height:100px;" alt="@item.name" />
+                    }
+                </td>
+                <td>@item.price</td>
+                <td>@item.isFavourite</td>
+                <td>@item.available</td>
+                <td>@item.bodyType</td>        @* Довжина *@
+                <td>@item.horsepower</td>      @* Сили *@
+                <td>@item.fuelType</td>        @* Швидкість *@
+                <td>@item.color</td>
+                <td>@item.transmission</td>    @* Рік *@
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.id" class="btn btn-warning btn-sm">✏️</a> |
+                    <a asp-action="Details" asp-route-id="@item.id" class="btn btn-info btn-sm">🔍</a> |
+                    <a asp-action="Delete" asp-route-id="@item.id" class="btn btn-danger btn-sm">🗑️</a>
                 </td>
             </tr>
         }

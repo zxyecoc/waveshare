@@ -1,7 +1,5 @@
-
 {
   "ConnectionStrings": {
-    "DefaultConnection": "Server=localhost\\SQLEXPRESS01;Database=YourDatabaseName;Trusted_Connection=True; TrustServerCertificate=True"
-
+    "DefaultConnection": "Server=DESKTOP-SBNHK7S;Database=Rental;Trusted_Connection=True;MultipleActiveResultSets=true"
   }
 }

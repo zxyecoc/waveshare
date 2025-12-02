@@ -66,7 +66,7 @@ else
         <div class="characteristic-item">
             <div class="d-flex align-items-center">
                 <img src="/img/body.png" alt="Body" style="width: 35px; height: 35px; margin-right: 15px;">
-                <span class="fw-bold" style="font-size: 1.1rem; color: #333;">Тип кузова:</span>
+                <span class="fw-bold" style="font-size: 1.1rem; color: #333;">Довжина човна:</span>
             </div>
             <span class="text-secondary" style="font-size: 1.2rem;">@Model.bodyType</span>
         </div>
@@ -94,14 +94,14 @@ else
         <div class="characteristic-item">
             <div class="d-flex align-items-center">
                 <img src="/img/fuel.png" alt="Fuel" style="width: 35px; height: 35px; margin-right: 15px;">
-                <span class="fw-bold" style="font-size: 1.1rem; color: #333;">Тип пального:</span>
+                <span class="fw-bold" style="font-size: 1.1rem; color: #333;">Максимальна швидкість:</span>
             </div>
             <span class="text-secondary" style="font-size: 1.2rem;">@Model.fuelType</span>
         </div>
         <div class="characteristic-item">
             <div class="d-flex align-items-center">
                 <img src="/img/transmission.png" alt="Transmission" style="width: 35px; height: 35px; margin-right: 15px;">
-                <span class="fw-bold" style="font-size: 1.1rem; color: #333;">Коробка передач:</span>
+                <span class="fw-bold" style="font-size: 1.1rem; color: #333;">Рік випуску:</span>
             </div>
             <span class="text-secondary" style="font-size: 1.2rem;">@Model.transmission</span>
         </div>
@@ -117,7 +117,7 @@ else
             {
                 @if (Model.CarInCart)
                 {
-                    <a class="btn btn-primary btn-sm auto-in-cart-btn" href="@Url.Action("Index", "RentalCart")" style="padding: 8px 20px;">Авто в кошику</a>
+                    <a class="btn btn-primary btn-sm auto-in-cart-btn" href="@Url.Action("Index", "RentalCart")" style="padding: 8px 20px;">Човен в кошику</a>
                 }
                 else
                 {
@@ -151,13 +151,13 @@ else
         transition: background-color 0.3s ease, color 0.3s ease;
     }
 
-    /* Стиль для кнопки "Авто в кошику" при наведенні */
+    
     .auto-in-cart-btn:hover {
         background-color: #007bff; /* Синій */
         color: #fff; /* Білий текст */
     }
 
-    /* Стиль для кнопки "Додати до кошика" при наведенні */
+   
     .add-to-cart-btn:hover {
         background-color: #28a745; /* Зелений */
         color: #fff; /* Білий текст */

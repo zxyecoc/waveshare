@@ -42,7 +42,7 @@ namespace Rental.Data.Models
             // Завантажуємо поточний список елементів кошика, щоб уникнути проблеми з null
             listRentalItems = getRentalItems();
 
-            // Перевірка, чи автомобіль вже в кошику
+            // Перевірка, чи Човен вже в кошику
             var existingItem = listRentalItems.FirstOrDefault(i => i.car.id == car.id);
             if (existingItem == null)
             {
